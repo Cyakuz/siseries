@@ -1,0 +1,16 @@
+rjscj0314kr5lr0sdgc9f096njigbc id
+gyd5qqnestnu5rgw3kdmk28dtod32p secret
+
+
+{
+    "access_token": "jkm3cy1b76t1odhn4ik6c26zx1jse4",
+    "expires_in": 5140298,
+    "token_type": "bearer"
+}
+
+0 cat
+212094 cover
+12 genres
+25636 similar game
+125914 websites
+ 
