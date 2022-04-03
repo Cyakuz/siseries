@@ -1,9 +1,6 @@
-from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage, Label
+from tkinter import Tk, Canvas,PhotoImage
 from subprocess import call
-
-from numpy import pad
-from pyparsing import col
-from logs import Paths, CanvasButton
+from logs import Paths
 
 window = Tk()
 window.geometry("1280x720")

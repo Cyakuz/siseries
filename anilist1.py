@@ -1,8 +1,6 @@
-from cgitb import text
 from multiprocessing import connection
 from AnilistPython import Anilist
 import pandas as pd
-import numpy as np
 import urllib.request
 from tkinter import *
 from PIL import Image, ImageTk

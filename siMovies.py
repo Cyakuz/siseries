@@ -1,5 +1,5 @@
 from cProfile import label
-from tkinter import Label, StringVar, Tk, Canvas, Entry, Text, Button, PhotoImage, mainloop
+from tkinter import StringVar, Tk, Canvas, Entry, PhotoImage, mainloop
 from logs import Logs,Paths,CanvasButton
 from tables import Make1, Make2
 from sisql import Sql

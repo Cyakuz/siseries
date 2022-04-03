@@ -4,7 +4,7 @@ from PIL import Image, ImageTk
 import sqlite3
 from imdb1 import getmyimdb,getmyseries
 from anilist1 import myanimelist,Waifu
-from logs import CanvasButton, Paths
+from logs import Paths
 from logs import Paths,Tbfs,Logs
 from sisql import Sql
 from request import Igdb, gameid

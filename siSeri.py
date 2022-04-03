@@ -1,4 +1,4 @@
-from tkinter import  StringVar, Tk, Canvas, Entry, Text, Button, PhotoImage, mainloop
+from tkinter import  StringVar, Tk, Canvas, Entry, PhotoImage, mainloop
 from logs import Paths,CanvasButton
 from sisql import Sql
 from tables import Make3, Make4
