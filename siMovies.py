@@ -1,6 +1,6 @@
 from cProfile import label
 from tkinter import StringVar, Tk, Canvas, Entry, PhotoImage, mainloop
-from logs import Logs,Paths,CanvasButton
+from logs import Logs,Paths,CanvasButton, Homebutton
 from tables import Make1, Make2
 from sisql import Sql
 ### Class ###
@@ -195,6 +195,7 @@ button_1 = CanvasButton(canvas, 173 , 595, BUTTON_IMG_PATH_EKLE, command=lambda:
 button_2 = CanvasButton(canvas, 560 , 180, BUTTON_IMG_PATH_EKLE, command=lambda: submitwl()) 
 button_3 = CanvasButton(canvas, 560 , 330, BUTTON_IMG_PATH_GETIR, command=lambda: Make1()) 
 button_4 = CanvasButton(canvas, 560 , 490, BUTTON_IMG_PATH_GETIR, command=lambda: Make2())
+button_5 = Homebutton(canvas,window)
 ##### BUTONLAR BİTTİ ########
 
 window.resizable(False, False)

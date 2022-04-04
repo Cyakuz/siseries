@@ -1,5 +1,5 @@
 from tkinter import  StringVar, Tk, Canvas, Entry, PhotoImage, mainloop
-from logs import Paths,CanvasButton
+from logs import Paths,CanvasButton, Homebutton
 from sisql import Sql
 from tables import Make3, Make4
 
@@ -183,6 +183,7 @@ button_1 = CanvasButton(canvas, 173 , 595, BUTTON_IMG_PATH_EKLE, command=lambda:
 button_2 = CanvasButton(canvas, 560 , 180, BUTTON_IMG_PATH_EKLE, command=lambda: submitwl()) 
 button_3 = CanvasButton(canvas, 560 , 330, BUTTON_IMG_PATH_GETIR, command=lambda: Make3()) 
 button_4 = CanvasButton(canvas, 560 , 490, BUTTON_IMG_PATH_GETIR, command=lambda: Make4())
+button_5 = Homebutton(canvas,window)
 ##### BUTONLAR BİTTİ ########
 
 window.resizable(False, False)

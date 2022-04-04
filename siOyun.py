@@ -1,5 +1,5 @@
 from tkinter import  StringVar, Tk, Canvas, Entry,  PhotoImage, mainloop
-from logs import Logs,Paths,CanvasButton
+from logs import Logs,Paths,CanvasButton, Homebutton
 from tables import Game
 ### Class ###
 class Movies:
@@ -79,6 +79,7 @@ BUTTON_IMG_PATH_ARA = Paths.relative_to_assets("ara.png")
 
 
 button_1 = CanvasButton(canvas, 200 , 350, BUTTON_IMG_PATH_ARA, command=lambda: submit())
+button_5 = Homebutton(canvas,window)
 
 
 ##### BUTONLAR BİTTİ ########
