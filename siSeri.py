@@ -17,7 +17,7 @@ def submit():
     ca= Movies.catg.get()
     co = Movies.comment.get()
     mi = n
-    Sql.SelectOps(mi)
+    Sql.SelectOps_Dizi(mi)
     return Sql.ins_series_db(n,s,co)
 
 def submitwl():

@@ -409,7 +409,6 @@ class Make1(Buttons):
 class Make2(ButtonforWL):
     def __init__(self) -> None:
         self.construct("280x370",25)
-        #self.root.geometry("250x370")
         self.table()
         self.tableDetails("MovieName","","","","",250,50,50,50,50)
         self.tags()
@@ -438,7 +437,6 @@ class Make3(Buttons):
 class Make4(ButtonforWL):
     def __init__(self) -> None:
         self.construct("280x370",25)
-        #self.root.geometry("250x370")
         self.table()
         self.tableDetails("MovieName","","","","",250,50,50,50,50)
         self.tags()
