@@ -1,8 +1,8 @@
 from cProfile import label
 from tkinter import StringVar, Tk, Canvas, Entry, PhotoImage, mainloop
 from logs import Logs,Paths,CanvasButton, Homebutton
-from tables import Make1, Make2
-from sisql import Sql
+from tables import Make_Table_MovieList, Make_Table_MovieWL
+from sisql import Sql,SiSql
 ### Class ###
 class Movies:
     def __init__(self,name,score,catg,comment) -> None:
@@ -19,14 +19,14 @@ def submit():
     ca= Movies.catg.get()
     co = Movies.comment.get()
     mi = n
-    Sql.SelectOps(mi)
+    SiSql.SelectOps(mi,"MovieName","movies")
     return Sql.ins_movies_db(n,s,ca,co)
 
 def submitwl():
     m = Movies.name.get()
     mi = m
-    Sql.SelectOpsWl(mi)
-    return Sql.ins_wl_db(m)
+    SiSql.SelectOps(mi,"MovieName","watchlist")
+    return Sql.ins_wl_db(m,"watchlist","MovieName")
 ### Film Ekleme ####
 ### GUI ###
 window = Tk()
@@ -193,8 +193,8 @@ BUTTON_IMG_PATH_GETIR = Paths.relative_to_assets("getir1.png")
 
 button_1 = CanvasButton(canvas, 173 , 595, BUTTON_IMG_PATH_EKLE, command=lambda: submit())
 button_2 = CanvasButton(canvas, 560 , 180, BUTTON_IMG_PATH_EKLE, command=lambda: submitwl()) 
-button_3 = CanvasButton(canvas, 560 , 330, BUTTON_IMG_PATH_GETIR, command=lambda: Make1()) 
-button_4 = CanvasButton(canvas, 560 , 490, BUTTON_IMG_PATH_GETIR, command=lambda: Make2())
+button_3 = CanvasButton(canvas, 560 , 330, BUTTON_IMG_PATH_GETIR, command=lambda: Make_Table_MovieList()) 
+button_4 = CanvasButton(canvas, 560 , 490, BUTTON_IMG_PATH_GETIR, command=lambda: Make_Table_MovieWL())
 button_5 = Homebutton(canvas,window)
 ##### BUTONLAR BİTTİ ########
 

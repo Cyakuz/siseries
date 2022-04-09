@@ -6,7 +6,7 @@ from imdb1 import getmyimdb,getmyseries
 from anilist1 import myanimelist,Waifu
 from logs import Paths
 from logs import Paths,Tbfs,Logs
-from sisql import Sql
+from sisql import Sql,SiSql
 from request import Igdb, gameid
 
 class App():
@@ -392,7 +392,7 @@ class ButtonforWL(Buttons):
 ###################### Bitti #############################
 
 ###################### Tabloların Oluşturulmuş Halleri ########################
-class Make1(Buttons):
+class Make_Table_MovieList(Buttons):
     def __init__(self) -> None:
         self.construct("550x315",25)
         self.table()
@@ -404,9 +404,9 @@ class Make1(Buttons):
     def tags(self):
         tag = "movies"
         col = "*"
-        Sql.SelectTable(self.my_tree,tag,col)
+        SiSql.SelectTable(self.my_tree,tag,col,1,2,3,3)
 
-class Make2(ButtonforWL):
+class Make_Table_MovieWL(ButtonforWL):
     def __init__(self) -> None:
         self.construct("280x370",25)
         self.table()
@@ -417,9 +417,11 @@ class Make2(ButtonforWL):
         self.root.mainloop()
 
     def tags(self):
-        Sql.SelectTableW(self.my_tree)
+        tag = "watchlist"
+        col = "MovieName"
+        SiSql.SelectTable(self.my_tree,tag,col,0,0,0,0)
 
-class Make3(Buttons):
+class Make_Table_SeriesList(Buttons):
         def __init__(self) -> None:
             self.construct("540x400",25)
             self.table()
@@ -432,21 +434,23 @@ class Make3(Buttons):
         def tags(self):
             tag = "series"
             col = "*"
-            Sql.SelectTableSeries(self.my_tree,tag,col)
+            SiSql.SelectTable(self.my_tree,tag,col,1,2,2,2)
 
-class Make4(ButtonforWL):
+class Make_Table_SeriesWL(ButtonforWL):
     def __init__(self) -> None:
         self.construct("280x370",25)
         self.table()
-        self.tableDetails("MovieName","","","","",250,50,50,50,50)
+        self.tableDetails("SeriesName","","","","",250,50,50,50,50)
         self.tags()
         self.watchlist_seriesbuttons()
         self.root.mainloop()
 
     def tags(self):
-        Sql.SelectTableSeriesWL(self.my_tree)
+        tag = "watchlist_series"
+        col = "SeriesName"
+        SiSql.SelectTable(self.my_tree,tag,col,0,0,0,0)
 
-class Make5(Buttons):
+class Make_Table_AnimeList(Buttons):
     def __init__(self) -> None:
         self.construct("665x390",18)
         self.table()
@@ -459,9 +463,9 @@ class Make5(Buttons):
     def tags(self):
         tag = "anime"
         col = "*"
-        Sql.SelectTableAnime(self.my_tree,tag,col)
+        SiSql.SelectTable(self.my_tree,tag,col,1,2,3,4)
 
-class Make6(ButtonforWL):
+class Make_Table_AnimeWL(ButtonforWL):
     def __init__(self) -> None:
         self.construct("280x320",25)
         self.table()
@@ -471,7 +475,9 @@ class Make6(ButtonforWL):
         self.root.mainloop()
 
     def tags(self):
-        Sql.SelectTableAnimeWL(self.my_tree)
+        tag = "watchlist_anime"
+        col = "taitoru"
+        SiSql.SelectTable(self.my_tree,tag,col,0,0,0,0)
 
 class Make7(Buttons):
     def __init__(self) -> None:
