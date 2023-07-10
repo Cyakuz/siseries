@@ -1,8 +1,8 @@
 from igdb.wrapper import IGDBWrapper
 import json
 ############ ID ve Token 2 Aylık Kullanım #######################
-client_id = "rjscj0314kr5lr0sdgc9f096njigbc"
-token = "jkm3cy1b76t1odhn4ik6c26zx1jse4"
+client_id = ""
+token = ""
 ########### ID ve Token 2 Aylık Kullanım ########################
 ########### IGDB Wrapper #######################
 wrapper = IGDBWrapper(client_id, token)
